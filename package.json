@@ -1,0 +1,24 @@
+{
+  "name": "pageobjectmodel_playwrightautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunrajm/PageObjectModel_PlaywrightAutomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sunrajm/PageObjectModel_PlaywrightAutomation/issues"
+  },
+  "homepage": "https://github.com/sunrajm/PageObjectModel_PlaywrightAutomation#readme",
+  "dependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
