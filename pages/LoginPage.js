@@ -11,7 +11,7 @@ class LoginPage extends BasePage{
         this.passwordField = page.locator("#password");
         this.loginButton=page.locator("#login-button");
         this.errorMessage=page.locator("[data-test='error']");
-        this.errorCloseButton=page.locator("//div[@class='error-message-container error']//button");
+        this.errorCloseButton=page.locator("[data-test='error-button']");
     }
 
     //------------------Actions-------------
