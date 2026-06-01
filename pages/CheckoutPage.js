@@ -7,9 +7,9 @@ class CheckoutPage extends BasePage {
     constructor(page) {
         super(page);
         //Step1 Locator
-        this.firstNameField = page.locator("[placeholder='First Name']");
-        this.lastNameField = page.locator("[placeholder='Last Name']");
-        this.postalField = page.locator("[placeholder='Zip/Postal Code']");
+        this.firstNameField = page.locator("[data-test='firstName']");
+        this.lastNameField = page.locator("[data-test='lastName']");
+        this.postalField = page.locator("[data-test='postalCode']");
         this.continueButton = page.locator("#continue");
         this.cancelButton = page.getByRole('button', { name: 'Cancel' });
         this.errorMessage = page.locator("[data-test='error']");
@@ -25,9 +25,9 @@ class CheckoutPage extends BasePage {
 
     //---Step one Actions -----------
     async fillShippingInfo(firstName, lastName, postalCode) {
-        this.typeText(this.firstNameField, firstName);
-        this.typeText(this.lastNameField, lastName);
-        this.typeText(this.postalField, postalCode);
+        await this.typeText(this.firstNameField, firstName);
+        await this.typeText(this.lastNameField, lastName);
+        await this.typeText(this.postalField, postalCode);
     }
 
     async clickContinue() {

@@ -38,4 +38,27 @@ const products = {
     redTShirt: "Test.allthethings() T Shirt (Red)"
 };
 
-module.exports = { users, errorMessage, productNames, products };
+const shippingInfo = {
+    valid: {
+        firstName: 'Jhon',
+        lastName: 'Doe',
+        postalCode: '12345',
+    },
+    missingFirstName: {
+        firstName: '',
+        lastName: 'Doe',
+        postalCode: '12345',
+    },
+    missingLastName: {
+        firstName: 'Jhon',
+        lastName: '',
+        postalCode: '12345',
+    },
+    missingPostalCode: {
+        firstName: 'Jhon',
+        lastName: 'Doe',
+        postalCode: '',
+    },
+};
+
+module.exports = { users, errorMessage, productNames, products, shippingInfo};

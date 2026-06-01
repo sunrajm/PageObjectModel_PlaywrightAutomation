@@ -13,7 +13,7 @@ test.describe('Login Test', () => {
     });
 
     //Positive test
-    test('TC01 - Valid login with standard user', async ({page}) => {
+    test('TC01 - Valid login with standard user', async ({ page }) => {
         await loginPage.login(users.standard.username, users.standard.password);
         await expect(page).toHaveURL('/inventory.html');
     });
@@ -39,9 +39,9 @@ test.describe('Login Test', () => {
     });
 
     test("TC05 - Empty password should see error", async () => {
-        await loginPage.login(users.standard.username,"");
+        await loginPage.login(users.standard.username, "");
         let error = await loginPage.getErrorMessage();
-        console.log(error);
+        //console.log(error);
         await expect(error).toContain(errorMessage.emptyPassword);
     });
 

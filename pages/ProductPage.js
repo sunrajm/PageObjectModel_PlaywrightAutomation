@@ -66,12 +66,8 @@ class ProductPage extends BasePage {
         return prices.map(p => parseFloat(p.replace('$', '')));
     }
 
-    async getProductCountInCart(){
-        return await this.page.getText(this.badgeCount);
-    }
-
-    async getCartCount(){
-        if(await this.badgeCount.isVisible()){
+    async getCartCount() {
+        if (await this.badgeCount.isVisible()) {
             return await this.getText(this.badgeCount);
         }
         return '0';
